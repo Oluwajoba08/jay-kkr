@@ -5,27 +5,27 @@ import { motion, AnimatePresence } from "framer-motion"
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
   const [showNav, setShowNav] = useState(true)
-  const [prevScrollY, setPrevScrollY] = useState(0)
+  // const [prevScrollY, setPrevScrollY] = useState(0)
   const [navPage, setNavPage] = useState<"about" | "approach" | "invest" | "insights" | undefined>(undefined)
 
-  const handleScroll = () => {
-    if (window.innerWidth < 768) return
+  // const handleScroll = () => {
+  //   if (window.innerWidth < 768) return
 
-    if (window.scrollY > prevScrollY) {
-      setShowNav(false)
-    } else {
-      setShowNav(true)
-    }
-    setPrevScrollY(window.scrollY)
-  }
+  //   if (window.scrollY > prevScrollY) {
+  //     setShowNav(false)
+  //   } else {
+  //     setShowNav(true)
+  //   }
+  //   setPrevScrollY(window.scrollY)
+  // }
 
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll)
+  // useEffect(() => {
+  //   document.addEventListener("scroll", handleScroll)
 
-    return () => {
-      document.removeEventListener("scroll", handleScroll)
-    }
-  }, [prevScrollY])
+  //   return () => {
+  //     document.removeEventListener("scroll", handleScroll)
+  //   }
+  // }, [prevScrollY])
 
   return (
     <nav className={`flex flex-col fixed top-0 w-full items-center z-10 ${navOpen && "ampersand-bg"}`}>
