@@ -6,13 +6,11 @@ import Footer from "../components/Footer"
 
 const Search = () => {
   const [inputValue, setinputValue] = useState("")
-  const [, set] = useState(false)
 
   return (
     <main className="relative">
       <Navbar />
       <div className="mt-24 py-24 bg-[#eef3f9]">
-        {/* <label htmlFor="search"> */}
         <form className="flex w-4/5 border border-black mx-auto">
           <input type="text" name="search" className="px-2 py-[10px] w-full" value={inputValue} onChange={(e) => setinputValue(e.target.value)} placeholder="Search" />
           <button className="p-3 bg-white">
@@ -26,7 +24,6 @@ const Search = () => {
             </svg>
           </button>
         </form>
-        {/* </label> */}
       </div>
       <div className="w-full h-16 bg-white"></div>
       <Footer />

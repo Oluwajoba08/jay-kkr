@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
@@ -112,9 +111,6 @@ const Navbar = () => {
             </motion.div>
             {navOpen && (
               <div className="mt-24 relative overflow-x-hidden overflow-y-scroll h-[calc(100vh-76px)] pt-8 w-full bg-[--color-primary-turquoise] text-white font-light ampersand-bg">
-                {/* <div className="absolute -right-[500px] top-16 w-[50rem] md:w-[69rem] h-full overflow-y-hidden">
-                  <Image src={`/grey-ampersand.svg`} width={200} height={800} className="w-full opacity-10" alt={`Ampersand image`} />
-                </div> */}
                 <div className="absolute top-0 left-0 z-[1]">
                   <div className="flex">
                     {(window.innerWidth >= 768 || navPage === undefined) && (
